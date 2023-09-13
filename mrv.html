@@ -9,19 +9,19 @@
   </head>
   <body>
     <h1>MRV MARC Record Viewer</h1>
-    <p>A simple online tool for viewing MARC records in .mrc format. See <a href="http://www.aurochs.org/aurlog/2012/10/02/mrv-marc-record-viewer/">Aurlog</a> for a brief write-up. The code is available on <a href="https://github.com/Orangeaurochs/MRV-MARC-Record-Viewer">GitHub</a>.</p>
-    <form id="mrc_input_form" name="mrc_input_form">
-      <p>Copy and paste the contents of an .mrc file below:</p>
-      <p><textarea cols="100" rows="5" id="mrc_input_textarea"></textarea></p>
-      <p><input type="button" value="Submit" onclick="view_marc()"></p>
+    <form id="mrc_input_form" name="mrc_input_form" enctype="multipart/form-data">
+      <p>Select an .mrc or .txt file to upload:</p>
+    <p>The following <a href="https://github.com/Orangeaurochs/MRV-MARC-Record-Viewer"> repository</a> was forked to enable file inputs, CSV Outputs, and only exports each ISBN, Author, and Title</p>
+      <p><input type="file" id="mrc_input_file"></p>
       <p>
-        <input type="reset" value="Clear">
         <input type="button" value="Submit" onclick="view_marc()">
+        <input type="button" value="Export CSV" onclick="export_csv()">
+        <input type="reset" value="Clear">
       </p>
+
     </form>
     <p id="report"></p>
     <p id="index"></p>
     <ol id="records_list"></ol>
-    </p>
   </body>
 </html>
