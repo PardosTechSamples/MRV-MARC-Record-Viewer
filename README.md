@@ -3,9 +3,16 @@ MRV-MARC-Record-Viewer
 
 MRV MARC Record Viewer
 
-See http://www.aurochs.org/mrv/mrv.html to see it working or just to use it.
+The original Record viewer by Thomas Meehan was forked to add features and strip unnecessary data.
 
-See http://www.aurochs.org/aurlog/2012/10/02/mrv-marc-record-viewer/ for more information.
+Intent: Output ISBN, BOOK TITLE, and, Author to CSV
+        After breaking down the outputs, I found the necessary MARC input fields to be [020, 100, 245]
 
-By Thomas Meehan (Orangeaurochs)
-tom@aurochs.org
+
+Changes:
+      Inputs: You can now process files rather rather than the original text field (.mrc / .txt) 
+      Output: The Submit button displays the processed ISBN, Book Title, and Author.
+              The Export button outputs the ISBN, Book Title, and Authors into a single CSV File.
+
+
+              
