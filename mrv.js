@@ -13,9 +13,6 @@ function mrc_view(mrc) {
     if (field_tag === "100" || field_tag === "020" || field_tag === "245") {
       var fieldContents = mrc_elements[i + 1].substr(2);
 
-      // Remove instances of "a" from the fieldContents
-      fieldContents = fieldContents.replace(/a/g, "");
-
       if (field_tag === "020") {
         // Remove non-numeric characters from the ISBN
         fieldContents = fieldContents.replace(/[^\d]/g, "");
